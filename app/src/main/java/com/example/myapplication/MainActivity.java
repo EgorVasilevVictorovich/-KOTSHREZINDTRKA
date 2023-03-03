@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     sMove = "Движение: координата X = " + x + ", координата y = " + y;
                     if (x < (xCat + deltaCat) && x > (xCat - deltaCat) && y < (yCat + deltaCat) && y > (yCat - deltaCat)) { // если пользователь коснулся места нахождения кота
                         Toast toast = Toast.makeText(getApplicationContext(), R.string.successful_search, Toast.LENGTH_SHORT); // инициализация
-                        toast.setGravity(Gravity.LEFT, (int) (x+deltaCat),(int) deltaCat);
+                        toast.setGravity(Gravity.LEFT, (int) (x-deltaCat),(int) deltaCat);
                         LinearLayout toastContainer = (LinearLayout) toast.getView();
                         ImageView cat = new ImageView(getApplicationContext());
                         cat.setImageResource(R.drawable.found_cat);
